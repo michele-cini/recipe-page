@@ -36,15 +36,19 @@ h2 {
 
 h1 {
     margin-top: 1.25em;
-    margin-bottom: 0.75em;
     color: var(--stone-900);
     font-size: 35px;
     line-height: 1em;
 }
 
+p {
+    margin: 1.35em 0;
+}
+
 h2 {
     color: var(--brown-800);
     font-size: 27px;
+    margin-top: 1em;
 }
 
 main {
@@ -67,6 +71,57 @@ article {
 .prep-time {
     background-color: var(--rose-50);
     padding: 1.25em 1.5em 0.75em;
-    margin: 2em 0;
+    margin-top: 2em;
     border-radius: 1em;
+}
+
+ul,
+ol {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+li {
+  position: relative;
+}
+
+ul li::before {
+    content: "•";
+    position: absolute;
+    font-size: 1.2em;
+    left: -1.75em;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--brown-800);
+}
+
+.prep-time ul li::before {
+    color: var(--rose-800);
+}
+
+ol {
+    counter-reset: step;
+}
+
+ol li {
+    counter-increment: step;
+}
+
+ol li::before {
+    content: counter(step) ".";
+    position: absolute;
+    left: -2.2em;
+    color: var(--brown-800);
+    font-weight: 600;
+}
+
+hr {
+    margin-top: 2em;
+    border: 0.7px solid var(--stone-150);
+}
+
+.nutrition {
+    width: 97%;
 }
