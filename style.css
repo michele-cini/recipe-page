@@ -164,7 +164,7 @@ tr:not(:last-child) {
     main {
         width: 95vw;
         border-radius: 1.5em;
-        margin: 2em 0;
+        margin: 5em 0;
     }
 
     main img {
